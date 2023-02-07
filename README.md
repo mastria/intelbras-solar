@@ -35,7 +35,7 @@ A aplicação foi desenvolvida utilizando o framework [Laravel ](https://laravel
 
 <br>
 
-## Comandos criados
+## Comandos disponíveis
 
 1. Envia status de cada estação da planta  
    `php artisan verificar_geracao`  
@@ -43,6 +43,16 @@ A aplicação foi desenvolvida utilizando o framework [Laravel ](https://laravel
 2. Envia quantidade total gerada no dia  
    `php artisan enviar_total_gerado`  
 
+<br>
+
+## Rotinas
+Configurável em App\Console\Kernel
+
+1. Das 9h às 18h enviar a cada hora o estado de cada estação  
+2. Às 18h30 enviar o total gerado no dia  
+   
+Para habilitar a rotina, adicione a entrada abaixo no cron do seu servidor:
+`* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1`  
 <br>
 
 ## The MIT License (MIT)

@@ -12,7 +12,8 @@ A aplicação foi desenvolvida utilizando o framework [Laravel ](https://laravel
 ## Instalação
 
 1. Instale as dependências
-   `composer install`
+   `composer install`  
+   <br>
 2. Faça uma cópia do arquivo `.env-example` para `.env` e configure as variáveis de ambiente:
 
    ```apache
@@ -37,9 +38,10 @@ A aplicação foi desenvolvida utilizando o framework [Laravel ](https://laravel
 ## Comandos criados
 
 1. Envia status de cada estação da planta (necessário configurar em App\Console\Commands\VerificarGeracao)
-   `php artisan verificar_geracao`
+   `php artisan verificar_geracao`  
+   <br>
 2. Envia quantidade total gerada no dia
-   `php artisan enviar_total_gerado`
+   `php artisan enviar_total_gerado`  
 
 <br>
 

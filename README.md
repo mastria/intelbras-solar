@@ -37,7 +37,7 @@ A aplicação foi desenvolvida utilizando o framework [Laravel ](https://laravel
 
 ## Comandos criados
 
-1. Envia status de cada estação da planta
+1. Envia status de cada estação da planta  
    `php artisan verificar_geracao`  
    <br>
 2. Envia quantidade total gerada no dia  

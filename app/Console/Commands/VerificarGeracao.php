@@ -71,21 +71,20 @@ class VerificarGeracao extends Command
 
         if (isset($retorno['result']) && $retorno['result'] == '1') {
 
-            $total = floatval($retorno['obj']['datas'][0]['eToday']) + floatval($retorno['obj']['datas'][1]['eToday']) + floatval($retorno['obj']['datas'][2]['eToday']);
+            $message = null;
+            $total = 0;
+            $i = 1;
+            foreach ($retorno['obj']['datas'] as $estacao) {
+                $message .= "⚡*Gerador {$i} ({$estacao['alias']})*:\n" .
+                    "Energia gerada: {$estacao['eToday']}kWh\n" .
+                    "Potência atual: {$estacao['pac']}W\n" .
+                    "Status: {$this->status($estacao['status'])}\n\n";
 
-            $message = "⚡*Gerador 1:*\n" .
-                "Energia gerada: {$retorno['obj']['datas'][0]['eToday']}kWh\n" .
-                "Potência atual: {$retorno['obj']['datas'][0]['pac']}W\n" .
-                "Status: {$this->status($retorno['obj']['datas'][0]['status'])}\n\n" .
-                "⚡*Gerador 2:*\n" .
-                "Energia gerada: {$retorno['obj']['datas'][1]['eToday']}kWh\n" .
-                "Potência atual: {$retorno['obj']['datas'][1]['pac']}W\n" .
-                "Status: {$this->status($retorno['obj']['datas'][1]['status'])}\n\n" .
-                "⚡*Gerador 3:*\n" .
-                "Energia gerada: {$retorno['obj']['datas'][2]['eToday']}kWh\n" .
-                "Potência atual: {$retorno['obj']['datas'][2]['pac']}W\n" .
-                "Status: {$this->status($retorno['obj']['datas'][2]['status'])}\n\n\n" .
-                "🔋*Total:* {$total}kWh";
+                $total += floatval($estacao['eToday']);
+                $i++;
+            }
+
+            $message .= "\n🔋*Total:* {$total}kWh";
 
             foreach ($telegramChatIds as $chatId) {
                 Telegram::sendMessage([

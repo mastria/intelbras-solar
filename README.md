@@ -1,0 +1,64 @@
+<p align="center">
+    <a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a>
+    <a href="http://solar-monitoramento.intelbras.com.br" target="_blank"><img src="http://solar-monitoramento.intelbras.com.br/v3/images/odm/login_logo.png" width="250" alt="Laravel Logo"></a>
+</p>
+
+## Intelbras Solar
+
+A aplicação foi desenvolvida utilizando o framework [Laravel ](https://laravel.com/)com intuito básico de enviar as informações da energia gerada contidas no painel da [Intelbras Solar](http://solar-monitoramento.intelbras.com.br) através do [Telegram](https://telegram.org/).
+
+<br>
+
+## Instalação
+
+1. Instale as dependências
+   `composer install`
+2. Faça uma cópia do arquivo `.env-example` para `.env` e configure as variáveis de ambiente:
+
+   ```apache
+   # Token do BOT do Telegram
+   TELEGRAM_BOT_TOKEN=
+
+   # Id dos chats (separados por vírgula) para onde quer enviar
+   TELEGRAM_CHAT_IDS=
+
+   # Usuário da plataforma
+   INTELBRAS_USER=
+
+   # Senha da plataforma
+   INTELBRAS_PASSWORD=
+
+   # Id da planta de instalação (está como atributo value no menu superior esquerdo da plataforma)
+   INTELBRAS_PLANT_ID=
+   ```
+
+<br>
+
+## Comandos criados
+
+1. Envia status de cada estação da planta (necessário configurar em App\Console\Commands\VerificarGeracao)
+   `php artisan verificar_geracao`
+2. Envia quantidade total gerada no dia
+   `php artisan enviar_total_gerado`
+
+<br>
+
+## The MIT License (MIT)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

@@ -51,7 +51,7 @@ Configurável em App\Console\Kernel
 1. Das 9h às 18h enviar a cada hora o estado de cada estação  
 2. Às 18h30 enviar o total gerado no dia  
    
-Para habilitar a rotina, adicione a entrada abaixo no cron do seu servidor:
+Para habilitar a rotina, adicione a entrada abaixo no cron do seu servidor:  
 `* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1`  
 <br>
 

@@ -13,14 +13,14 @@ class VerificarGeracao extends Command
      *
      * @var string
      */
-    protected $signature = 'verificar_geracao';
+    protected $signature = 'intelbras:verificar-geracao';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Verificar a quantidade de energia gerada por gerador';
+    protected $description = 'Verificar a quantidade de energia gerada por estação e envia por mensagem via Telegram';
 
     /**
      * Execute the console command.

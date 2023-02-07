@@ -38,10 +38,10 @@ A aplicação foi desenvolvida utilizando o framework [Laravel ](https://laravel
 ## Comandos disponíveis
 
 1. Envia status de cada estação da planta  
-   `php artisan verificar_geracao`  
+   `php artisan intelbras:verificar-geracao`  
    <br>
 2. Envia quantidade total gerada no dia  
-   `php artisan enviar_total_gerado`  
+   `php artisan intelbras:total-gerado`  
 
 <br>
 

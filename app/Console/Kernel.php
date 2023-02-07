@@ -15,8 +15,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('verificar_geracao')->hourly()->between('9:00', '18:00');
-        $schedule->command('enviar_total_gerado')->dailyAt('18:30');
+        $schedule->command('intelbras:verificar-geracao')->hourly()->between('9:00', '18:00');
+        $schedule->command('intelbras:total-gerado')->dailyAt('18:30');
     }
 
     /**

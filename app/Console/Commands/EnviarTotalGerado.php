@@ -13,14 +13,14 @@ class EnviarTotalGerado extends Command
      *
      * @var string
      */
-    protected $signature = 'enviar_total_gerado';
+    protected $signature = 'intelbras:total-gerado';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Enviar total de energia gerada no dia';
+    protected $description = 'Verifica a quantidade total de energia gerada no dia e envia por mensagem via Telegram';
 
     /**
      * Execute the console command.

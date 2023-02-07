@@ -11,7 +11,7 @@ A aplicação foi desenvolvida utilizando o framework [Laravel ](https://laravel
 
 ## Instalação
 
-1. Instale as dependências
+1. Instale as dependências  
    `composer install`  
    <br>
 2. Faça uma cópia do arquivo `.env-example` para `.env` e configure as variáveis de ambiente:
@@ -40,7 +40,7 @@ A aplicação foi desenvolvida utilizando o framework [Laravel ](https://laravel
 1. Envia status de cada estação da planta (necessário configurar em App\Console\Commands\VerificarGeracao)
    `php artisan verificar_geracao`  
    <br>
-2. Envia quantidade total gerada no dia
+2. Envia quantidade total gerada no dia  
    `php artisan enviar_total_gerado`  
 
 <br>

@@ -45,7 +45,7 @@ A aplicação foi desenvolvida utilizando o framework [Laravel ](https://laravel
 
 <br>
 
-## Rotinas
+## Rotinas  
 Configurável em App\Console\Kernel
 
 1. Das 9h às 18h enviar a cada hora o estado de cada estação  
@@ -55,6 +55,11 @@ Para habilitar a rotina, adicione a entrada abaixo no cron do seu servidor:
 `* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1`  
 <br>
 
+## Exemplo
+<img src="example/example.png" width="50%" alt="Exemplo">
+  
+<br>
+  
 ## The MIT License (MIT)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
